@@ -1,1 +1,24 @@
+#MAT2007-Deepspace-Radio-Signal-Pulsar-Analysis
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd 
 
+#First function opens and reads the csv file, and turns it into a dataframe
+
+dataframe_columns = [
+"Mean_signal_strength",
+    "Standard deviation of the signal strength",
+    "profile_kurtosis",
+    "profile_skewness",
+    "DM_SNR_mean",
+    "DM_SNR_sdev",
+    "DM_SNR_kurtosis",
+    "DM_SNR skew",
+    "Pulsar (1/0)"
+    ]
+
+df = pd.read_csv("HTRU_2.csv", header=None, names=dataframe_columns)
+print("Reading through the csv file containing pulsar data")
+
+print(df.head())
+print(df.shape)
